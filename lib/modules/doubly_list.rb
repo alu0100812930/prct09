@@ -1,4 +1,5 @@
 class DList
+    include Enumerable
        Node = Struct.new(:value,:before, :next)
     attr_accessor :head, :end_
   def initialize(content = nil)
@@ -123,5 +124,17 @@ end
 cadena
 end
 
-
+def each(&block)
+  aux=@head
+  nodes = []
+  while aux!=nil
+    nodes << aux
+    aux=aux["next"]
+end
+nodes.each do |member|
+      block.call(member)
+    end
+  
+  
+end
 end
