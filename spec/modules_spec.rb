@@ -26,5 +26,15 @@ describe Modules do
             end
             expect(cadena).to be == "#{@edoc},#{@diario2},#{@diario},#{@revista},#{@libro},"
         end
+        
+          it "Los nodos guardados en un objeto de la clase DList pueden mostrarse ordenados alfabéticamente de acuerdo a la letra inicial de su primer autor " do
+      orden=@listad.sort_by{|node| node["value"]}
+      expect(orden[0]["value"]).to be == @diario2
+      expect(orden[1]["value"]).to be == @diario
+      expect(orden[2]["value"]).to be == @revista
+      expect(orden[3]["value"]).to be == @libro
+      expect(orden[4]["value"]).to be == @edoc
+    end
+    
       end
 end
