@@ -37,7 +37,8 @@ describe Modules do
     end
     
     it "Se puede obtener el nodo con el nombre de autor de mayor orden alfabético guardado en la lista" do
-      nodo=@listad.max
+      nodo=@listad.max_by{|node| node["value"]}
+      expect(nodo["value"]).to be == @edoc
     end
     
       end
