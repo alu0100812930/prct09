@@ -1,4 +1,5 @@
 class Biblioref
+  include Comparable
   attr_accessor :author
       attr_accessor :title
       attr_accessor :series
@@ -58,6 +59,9 @@ else
     end
     end 
     
+     def <=>(another)
+      @author<=>another.author
+    end
 end
 
 class Book < Biblioref
