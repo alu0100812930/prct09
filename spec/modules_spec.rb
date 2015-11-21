@@ -41,5 +41,10 @@ describe Modules do
       expect(nodo["value"]).to be == @edoc
     end
     
+    it "Se puede obtener el nodo con el nombre de autor de menor orden alfabético guardado en la lista" do
+      nodo=@listad.min_by{|node| node["value"]}
+      expect(nodo["value"]).to be == @diario2
+    end
+    
       end
 end
