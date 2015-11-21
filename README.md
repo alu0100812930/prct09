@@ -15,7 +15,7 @@ Descripción
 Este repositorio contiene un árbol de directorios y ficheros creados con la herramienta Bundler, la cual organiza la estructura necesaria para 
 poder obtener una "gema" o librería de ruby.
 
-Se incluyen dos ficheros con clases en lib/modules El primero es referencia.rb, el cual consta de una clase padre Biblioref que representa a referencias bibliográficas
+Se incluyen dos ficheros con clases en lib/modules El primero es references.rb, el cual consta de una clase padre Biblioref que representa a referencias bibliográficas
 y clases hijas Book, Magazine, Newspaper y EDoc que la heredan, las cuales representan referencias de libros, artículos de revista, artículos de periódico y documentos
 electrónicos respectivamente. Esta jerarquía de clases está modificada de tal manera que sus instancias comparables a través de la integración con el módulo "Comparable"
 
