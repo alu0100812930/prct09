@@ -17,4 +17,14 @@ describe Modules do
         expect(@diario == @diario2).to eq(true)
     end
     end
+    
+    context "Módulo Enumerable" do
+        it "Los nodos guardados en un objeto de la clase DList pueden mostrarse enumerados por un each" do
+            cadena = ""
+            @listad.each do |node|
+                cadena= cadena + "#{node["value"]},"
+            end
+            expect(cadena).to be == "#{@edoc},#{@diario2},#{@diario},#{@revista},#{@libro},"
+        end
+      end
 end
