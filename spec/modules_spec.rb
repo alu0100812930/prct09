@@ -26,9 +26,17 @@ describe Modules do
             end
             expect(cadena).to be == "#{@edoc},#{@diario2},#{@diario},#{@revista},#{@libro},"
         end
+        
         it "Se puede obtener el número de nodos guardados en la lista" do
           expect(@listad.count).to eq(5)
         end
+        
+        it "Se pueden eliminar los n primeros nodos de la lista con la opción drop" do
+          nodos=@listad.drop(3)
+          expect(nodos[0]["value"]).to be == @revista
+      expect(nodos[1]["value"]).to be == @libro
+        end
+        
           it "Los nodos guardados en un objeto de la clase DList pueden mostrarse ordenados alfabéticamente de acuerdo a la letra inicial de sus autores " do
       orden=@listad.sort_by{|node| node["value"]}
       expect(orden[0]["value"]).to be == @diario2
