@@ -36,6 +36,11 @@ describe Modules do
       expect(orden[4]["value"]).to be == @edoc
     end
     
+    it "Se puede detectar un nodo por el valor u objeto que almacena" do
+      nodo=@listad.detect{ |node| node["value"] == @diario}
+      expect(nodo["value"]).to be == @diario
+    end
+    
     it "Se puede obtener el nodo con el nombre de autor de mayor orden alfabético guardado en la lista" do
       nodo=@listad.max_by{|node| node["value"]}
       expect(nodo["value"]).to be == @edoc
@@ -45,6 +50,8 @@ describe Modules do
       nodo=@listad.min_by{|node| node["value"]}
       expect(nodo["value"]).to be == @diario2
     end
+    
+    
     
       end
 end
