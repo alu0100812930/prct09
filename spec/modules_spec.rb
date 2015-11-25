@@ -13,8 +13,20 @@ describe Modules do
     context "Módulo Comparable" do
         it "Las instancias se comparan correctamente de acuerdo al autor o sus autores y al orden alfabético de la letra inicial del primero de ellos" do
         expect(@libro > @revista).to eq(true)
+        expect(@libro >= @revista).to eq(true)
+        expect(@libro < @revista).to eq(false)
+         expect(@libro <= @revista).to eq(false)
+         expect(@libro == @revista).to eq(false)
         expect(@libro < @edoc).to eq(true)
+         expect(@libro <= @edoc).to eq(true)
+         expect(@libro > @edoc).to eq(false)
+         expect(@libro >= @edoc).to eq(false)
+         expect(@libro == @edoc).to eq(false)
         expect(@diario == @diario2).to eq(true)
+         expect(@diario <= @diario2).to eq(true)
+          expect(@diario >= @diario2).to eq(true)
+          expect(@diario > @diario2).to eq(false)
+          expect(@diario < @diario2).to eq(false)
     end
     end
     
