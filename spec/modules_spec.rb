@@ -1,7 +1,6 @@
 # encoding: UTF-8
 require 'spec_helper'
-require 'coveralls'
-Coveralls.wear!
+
 
 describe Modules do
  before:all do 
