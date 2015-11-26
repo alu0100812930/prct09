@@ -26,7 +26,8 @@ manera que sus instancias son enumerables a través de la integración con el m�
 
 Finalmente, existe un fichero de expectativas modules_spec.rb en el directorio spec, el cual contiene grupos de ejemplos de expectativas
 que se fueron escribiendo a medida que se desarrollaba el código para verificar y evaluar su funcionamiento. También se instaló y se configuró en el
-proyecto la herramienta de integración continua Travis, incluyendo su respectivo fichero .travis.yml.
+proyecto la herramienta de integración continua Travis, incluyendo su respectivo fichero .travis.yml. y la herramienta de cobertura de código coveralls,
+con su respectivo fichero .coveralls.yml.
 
 
 Árbol de ficheros y directorios
